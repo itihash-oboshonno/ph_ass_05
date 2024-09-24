@@ -7,13 +7,11 @@ function showPageById (id) {
 }
 
 document.getElementById('showPD').addEventListener('click', function(event) {
-    event.preventDefault;
-    console.log('Donation Clicked');
+    event.preventDefault();
     showPageById('pageDonation');
 })
 
 document.getElementById('showPH').addEventListener('click', function(event) {
-    event.preventDefault;
-    console.log('History Clicked');
+    event.preventDefault();
     showPageById('pageHistory');
 })
