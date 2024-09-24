@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <!-- DaisyUI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lexend Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Tailwind Custom -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        backg: '#F9F7F3',
+                        btngr: '#B4F461',
+                        blck: '#111111',
+                        lblck: 'rgba(17, 17, 17, 0.7)',
+                    },
+                    fontFamily: {
+                        Lexend: "Lexend",
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="font-Lexend">
+    <header class="sticky top-0 z-10">
+        <nav class="py-6 bg-backg">
+            <div class="flex justify-between items-center gap-x-8 mx-6 lg:mx-36">
+                <a href="./blog.html"><button class="px-5 lg:px-8 py-3 lg:py-3 rounded-xl bg-btngr hover:bg-[#91e227] transition ease-in-out duration-256 text-base lg:text-xl font-semibold text-blck">Blog</button></a>
+                <div><a href="./index.html" class="flex items-center gap-x-3">
+                    <img src="./assets/logo.png" alt="">
+                    <h4 class="text-base lg:text-xl font-semibold blck">Donate Bangladesh</h4></a>
+                </div>
+                <div class="flex items-center gap-x-3">
+                    <img src="./assets/coin.png" alt="">
+                    <p class="text-base lg:text-xl font-medium text-lblck"><span id="wallet">96400</span> BDT</p>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="lg:mx-48">
+        <div class="px-4">
+            <div class="p-6 rounded-2xl border-2 my-8 lg:max-w-6xl m-auto">
+                <div id="proshno1" class="flex justify-between cursor-pointer">
+                    <h3 class="font-bold text-xl text-blck">What is the Document Object Model (DOM)?</h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                      </svg>                      
+                </div>
+                <div id="uttor1" class="hidden">
+                    <p class="text-lblck text-base font-light pt-4 leading-loose">A programming interface for web documents, the Document Object Model (DOM) depicts a webpage's structure as a tree of objects. With JavaScript, developers may programmatically alter the content, structure, and style of HTML and XML pages. In this tree, every word, attribute, and element in an HTML document is regarded as a node. After a webpage has loaded, it can be dynamically modified thanks to the methods and properties the DOM offers to interact with these nodes. Developing responsive and interactive web applications requires it.</p>
+                </div>
+            </div>
+            <div class="p-6 rounded-2xl border-2 my-8 lg:max-w-6xl m-auto">
+                <div id="proshno2" class="flex justify-between cursor-pointer">
+                    <h3 class="font-bold text-xl text-blck">How do you select an element from the DOM?</h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                      </svg>                      
+                </div>
+                <div id="uttor2" class="hidden">
+                    <p class="text-lblck text-base font-light pt-4 leading-loose">
+                        Depending on your needs, JavaScript offers a number of techniques for selecting an element from the DOM:
+                        <br>
+                        <ul>
+                            <li>document.getElementById('id'): This method selects a single element based on its unique id attribute.</li>
+                            <li>document.querySelector('selector'): This method selects the first element that matches the specified CSS selector.</li>
+                            <li>document.querySelectorAll('selector'): This method selects all elements that match the given CSS selector and returns a NodeList.</li>
+                            <li>document.getElementsByClassName('class'): This method selects all elements that have the specified class name and returns an HTMLCollection.</li>
+                            <li>document.getElementsByTagName('tag'): This method selects all elements that match the specified tag name and returns an HTMLCollection.</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+            <div class="p-6 rounded-2xl border-2 my-8 lg:max-w-6xl m-auto">
+                <div id="proshno3" class="flex justify-between cursor-pointer">
+                    <h3 class="font-bold text-xl text-blck">What is event delegation in the context of the DOM, and why is it useful?</h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                      </svg>                      
+                </div>
+                <div id="uttor3" class="hidden">
+                    <p class="text-lblck text-base font-light pt-4 leading-loose">
+                        A JavaScript approach known as "event delegation" entails connecting a single event listener to a parent element as opposed to several child elements. An event that arises on a child element is handled by the parent since it bubbles up to them. Since it does away with the requirement to reconnect event listeners for newly added items, this technique is very helpful for managing events on huge lists of elements or dynamically generated content.
+                        <br>
+                        You may simplify your code, increase efficiency, and use less memory by implementing event delegation. You can construct a single handler that examines the event target to find out where the event originated, saving you the trouble of adding separate listeners to each child element. This method improves the responsiveness of your application and makes your code easier to maintain. All things considered, event delegation offers a strong method for effectively managing events in the DOM.
+                    </p>
+                </div>
+            </div>
+            <div class="p-6 rounded-2xl border-2 my-8 lg:max-w-6xl m-auto">
+                <div id="proshno4" class="flex justify-between cursor-pointer">
+                    <h3 class="font-bold text-xl text-blck">How do you manipulate an element's attributes and styles using the DOM?</h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                      </svg>                      
+                </div>
+                <div id="uttor4" class="hidden">
+                    <p class="text-lblck text-base font-light pt-4 leading-loose">
+                        JavaScript's DOM allows you to work with an element's styles and attributes using a variety of properties and methods, including:
+                        <ul>
+                            <li>Getting an Attribute: Use element.getAttribute('attributeName') to retrieve the value of a specific attribute.</li>
+                            <li>Setting an Attribute: Use element.setAttribute('attributeName', 'value') to set or change the value of an attribute.</li>
+                            <li>Removing an Attribute: Use element.removeAttribute('attributeName') to remove an attribute from an element.</li>
+                            <li>Setting Styles: You can set an element's inline styles using element.style.propertyName.</li>
+                            <li>Removing Styles: To remove an inline style, set it to an empty string.</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="py-16 bg-backg mt-10"></footer>
+        <p></p>
+    </footer>
+    <script src="./blogfeature.js"></script>
+</body>
+</html>

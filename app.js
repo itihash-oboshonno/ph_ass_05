@@ -119,7 +119,7 @@ document.getElementById('donSubQ').addEventListener('click', function(event) {
 // Donation Amount Function: End
 
 
-// Reseting All The Inputs Altogether Because Programming Hero Needs Common Function (COMMON FUNCTION 3)
+// Reseting All The Inputs After Confirming
 
 function resetAfterDone() {
     document.getElementById('donNumN').value = "";
@@ -130,5 +130,3 @@ function resetAfterDone() {
 document.getElementById('rstbtn').addEventListener('click', function() {
     resetAfterDone();
 })
-
-// Could've easily done this by just putting one line of that function in noakhali, feni, quota.
