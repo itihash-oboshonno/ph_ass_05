@@ -40,6 +40,11 @@ document.getElementById('showPH').addEventListener('click', function() {
 // Button Toggle Page Show Feature: End
 
 
+// Date and Time create:
+const shomoy = new Date();
+const date = shomoy.toString();
+
+
 // Donation Amount Function: Start
 
     // Noakhali
@@ -57,6 +62,10 @@ document.getElementById('donSubN').addEventListener('click', function(event) {
         document.getElementById('noakhali').innerText = noaNew;
         document.getElementById('donNumN').value = "";
         // Transaction History
+        document.getElementById('histUL').innerHTML += `<li class="p-6 rounded-2xl border-2 my-8 lg:max-w-6xl m-auto">
+                        <h3 class="font-bold text-xl text-blck"><span>${donAmount}</span> BDT Donated for Flood at Noakhali, Bangladesh.</h3>
+                        <p class="text-lblck text-base font-light pt-4">Date: ${date}</p>
+                    </li>`;
     }
 })
 
@@ -74,6 +83,11 @@ document.getElementById('donSubF').addEventListener('click', function(event) {
         const fenNew = fenDon + donAmount;
         document.getElementById('feni').innerText = fenNew;
         document.getElementById('donNumF').value = "";
+
+        document.getElementById('histUL').innerHTML += `<li class="p-6 rounded-2xl border-2 my-8 lg:max-w-6xl m-auto">
+                        <h3 class="font-bold text-xl text-blck"><span>${donAmount}</span> BDT Donated for Flood Relief at Feni, Bangladesh.</h3>
+                        <p class="text-lblck text-base font-light pt-4">Date: ${date}</p>
+                    </li>`;
     }
 })
 
@@ -91,5 +105,10 @@ document.getElementById('donSubQ').addEventListener('click', function(event) {
         const quoNew = quoDon + donAmount;
         document.getElementById('quota').innerText = quoNew;
         document.getElementById('donNumQ').value = "";
+
+        document.getElementById('histUL').innerHTML += `<li class="p-6 rounded-2xl border-2 my-8 lg:max-w-6xl m-auto">
+                        <h3 class="font-bold text-xl text-blck"><span>${donAmount}</span> BDT Donated for Aid for Injured in the Quota Movement.</h3>
+                        <p class="text-lblck text-base font-light pt-4">Date: ${date}</p>
+                    </li>`;
     }
 })
