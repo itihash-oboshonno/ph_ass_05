@@ -57,7 +57,7 @@
                     <img src="./assets/noakhali.png" alt="">
                 </div>
                 <div class="flex flex-col gap-y-5">
-                    <button class="px-4 py-3 rounded-lg bg-[#e9e9e9] flex items-center gap-x-2">
+                    <button class="cursor-default px-4 py-3 rounded-lg bg-[#e9e9e9] flex items-center gap-x-2">
                         <img src="./assets/coin.png" alt="">
                         <p class="text-base font-medium text-lblck"><span id="noakhali">0</span> BDT</p>
                     </button>
@@ -72,7 +72,7 @@
                     <img src="./assets/feni.png" alt="">
                 </div>
                 <div class="flex flex-col gap-y-5">
-                    <button class="px-4 py-3 rounded-lg bg-[#e9e9e9] flex items-center gap-x-2">
+                    <button class="cursor-default px-4 py-3 rounded-lg bg-[#e9e9e9] flex items-center gap-x-2">
                         <img src="./assets/coin.png" alt="">
                         <p class="text-base font-medium text-lblck"><span id="feni">600</span> BDT</p>
                     </button>
@@ -87,7 +87,7 @@
                     <img src="./assets/quota-protest.png" alt="">
                 </div>
                 <div class="flex flex-col gap-y-5">
-                    <button class="px-4 py-3 rounded-lg bg-[#e9e9e9] flex items-center gap-x-2">
+                    <button class="cursor-default px-4 py-3 rounded-lg bg-[#e9e9e9] flex items-center gap-x-2">
                         <img src="./assets/coin.png" alt="">
                         <p class="text-base font-medium text-lblck"><span id="quota">2400</span> BDT</p>
                     </button>
@@ -102,6 +102,21 @@
             <div>
                 <ul id="histUL"></ul>
             </div>
+        </div>
+        <div>
+            <dialog id="confModal" class="modal px-4">
+                <div class="modal-box max-w-xl text-center">
+                    <h3 class="font-bold text-4xl text-blck">Congrats!</h3>
+                    <div class="flex justify-center pt-4"><img src="./assets/coin.png" alt=""></div>
+                    <p class="py-4">You have donated for Humankind</p>
+                    <h3 class="font-bold text-xl text-blck">Succesfully</h3>
+                    <div class="modal-action justify-center">
+                        <form method="dialog">
+                            <button id="rstbtn" class="btn flex justify-center">Close Confirmation</button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
         </div>
     </main>
     <footer class="py-16 bg-backg mt-10">

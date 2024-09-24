@@ -52,7 +52,7 @@ document.getElementById('donSubN').addEventListener('click', function(event) {
     const donAmount = parseFloat(document.getElementById('donNumN').value);
     const wallAmount = parseFloat(document.getElementById('wallet').innerText);
     const noaDon = parseFloat(document.getElementById('noakhali').innerText);
-    if (donAmount <= 0 || donAmount > wallAmount) {
+    if (donAmount <= 0 || donAmount > wallAmount || isNaN(donAmount)) {
         alert('Invalid Amount');
     } else {
         event.preventDefault();
@@ -60,7 +60,8 @@ document.getElementById('donSubN').addEventListener('click', function(event) {
         document.getElementById('wallet').innerText = newWall;
         const noaNew = noaDon + donAmount;
         document.getElementById('noakhali').innerText = noaNew;
-        document.getElementById('donNumN').value = "";
+        document.getElementById('confModal').showModal();
+        
         // Transaction History
         document.getElementById('histUL').innerHTML += `<li class="p-6 rounded-2xl border-2 my-8 lg:max-w-6xl m-auto">
                         <h3 class="font-bold text-xl text-blck"><span>${donAmount}</span> BDT Donated for Flood at Noakhali, Bangladesh.</h3>
@@ -74,7 +75,7 @@ document.getElementById('donSubF').addEventListener('click', function(event) {
     const donAmount = parseFloat(document.getElementById('donNumF').value);
     const wallAmount = parseFloat(document.getElementById('wallet').innerText);
     const fenDon = parseFloat(document.getElementById('feni').innerText);
-    if (donAmount <= 0 || donAmount > wallAmount) {
+    if (donAmount <= 0 || donAmount > wallAmount || isNaN(donAmount)) {
         alert('Invalid Amount');
     } else {
         event.preventDefault();
@@ -82,8 +83,9 @@ document.getElementById('donSubF').addEventListener('click', function(event) {
         document.getElementById('wallet').innerText = newWall;
         const fenNew = fenDon + donAmount;
         document.getElementById('feni').innerText = fenNew;
-        document.getElementById('donNumF').value = "";
-
+        document.getElementById('confModal').showModal();
+        
+        // Transaction History
         document.getElementById('histUL').innerHTML += `<li class="p-6 rounded-2xl border-2 my-8 lg:max-w-6xl m-auto">
                         <h3 class="font-bold text-xl text-blck"><span>${donAmount}</span> BDT Donated for Flood Relief at Feni, Bangladesh.</h3>
                         <p class="text-lblck text-base font-light pt-4">Date: ${date}</p>
@@ -96,7 +98,7 @@ document.getElementById('donSubQ').addEventListener('click', function(event) {
     const donAmount = parseFloat(document.getElementById('donNumQ').value);
     const wallAmount = parseFloat(document.getElementById('wallet').innerText);
     const quoDon = parseFloat(document.getElementById('quota').innerText);
-    if (donAmount <= 0 || donAmount > wallAmount) {
+    if (donAmount <= 0 || donAmount > wallAmount || isNaN(donAmount)) {
         alert('Invalid Amount');
     } else {
         event.preventDefault();
@@ -104,11 +106,29 @@ document.getElementById('donSubQ').addEventListener('click', function(event) {
         document.getElementById('wallet').innerText = newWall;
         const quoNew = quoDon + donAmount;
         document.getElementById('quota').innerText = quoNew;
-        document.getElementById('donNumQ').value = "";
-
+        document.getElementById('confModal').showModal();
+        
+        // Transaction History
         document.getElementById('histUL').innerHTML += `<li class="p-6 rounded-2xl border-2 my-8 lg:max-w-6xl m-auto">
                         <h3 class="font-bold text-xl text-blck"><span>${donAmount}</span> BDT Donated for Aid for Injured in the Quota Movement.</h3>
                         <p class="text-lblck text-base font-light pt-4">Date: ${date}</p>
                     </li>`;
     }
 })
+
+// Donation Amount Function: End
+
+
+// Reseting All The Inputs Altogether Because Programming Hero Needs Common Function (COMMON FUNCTION 3)
+
+function resetAfterDone() {
+    document.getElementById('donNumN').value = "";
+    document.getElementById('donNumF').value = "";
+    document.getElementById('donNumQ').value = "";
+}
+
+document.getElementById('rstbtn').addEventListener('click', function() {
+    resetAfterDone();
+})
+
+// Could've easily done this by just putting one line of that function in noakhali, feni, quota.
